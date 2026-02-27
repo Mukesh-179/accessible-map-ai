@@ -1,0 +1,16 @@
+{
+  "python.defaultInterpreterPath": "c:/python313/python.exe",
+  "python.linting.pylintEnabled": false,
+  "python.linting.enabled": false,
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.formatOnSave": true
+  },
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.extraPaths": ["c:/python313/lib/site-packages"],
+  "python.analysis.diagnosticSeverityOverrides": {
+    "reportMissingImports": "none",
+    "reportMissingModuleSource": "none",
+    "reportMissingTypeStubs": "none"
+  }
+}
