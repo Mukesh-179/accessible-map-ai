@@ -1044,22 +1044,9 @@ notification_service = NotificationService()
 # ============================================
 # LIFESPAN EVENTS
 # ============================================
-
 @app.on_event("startup")
 async def startup_event():
-    """Initialize connections on startup"""
-    try:
-        await Database.connect()
-    except Exception as e:
-        logger.warning(f"⚠️  MongoDB not available: {e}")
-    
-    try:
-        await RedisClient.connect()
-    except Exception as e:
-        logger.warning(f"⚠️  Redis not available: {e}")
-    
-    logger.info("✅ Geoapify API Key: " + settings.GEOAPIFY_API_KEY[:10] + "...")
-    logger.info("🚀 Server started")
+    logger.info("🚀 Server started without DB/Redis init")
 
 @app.on_event("shutdown")
 async def shutdown_event():
