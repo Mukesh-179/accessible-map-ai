@@ -810,23 +810,22 @@ class MLService:
         self.yolo_model = None
         self.ocr_reader = None
         self.load_models()
-   
+
     def load_models(self):
-    """Load ML models only if enabled"""
-    if not USE_AI:
-        logger.info("🚫 AI models disabled (low RAM mode)")
-        return
+        """Load ML models only if enabled"""
+        if not USE_AI:
+            logger.info("🚫 AI models disabled (low RAM mode)")
+            return
 
-    try:
-        self.yolo_model = YOLO(settings.YOLO_MODEL_PATH)
-        logger.info("✅ YOLO model loaded")
+        try:
+            self.yolo_model = YOLO(settings.YOLO_MODEL_PATH)
+            logger.info("✅ YOLO model loaded")
 
-        self.ocr_reader = easyocr.Reader(['en'])
-        logger.info("✅ OCR model loaded")
+            self.ocr_reader = easyocr.Reader(['en'])
+            logger.info("✅ OCR model loaded")
 
-    except Exception as e:
-        logger.error(f"❌ Failed to load ML models: {e}")
-   
+        except Exception as e:
+            logger.error(f"❌ Failed to load ML models: {e}")
     async def detect_obstacles(self, image: np.ndarray) -> List[Dict[str, Any]]:
         """Detect obstacles in image"""
         detections: List[Dict[str, Any]] = []
