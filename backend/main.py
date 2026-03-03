@@ -1038,7 +1038,7 @@ app.add_middleware(
 )
 
 # Initialize services
-ml_service = MLService()
+ml_service = MLService() if USE_AI else None
 geoapify_service = GeoapifyService()
 notification_service = NotificationService()
 
