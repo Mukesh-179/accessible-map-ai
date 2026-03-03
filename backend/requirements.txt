@@ -13,7 +13,3 @@ email-validator
 aiohttp
 numpy
 opencv-python-headless
-torch==2.2.2
-torchvision==0.17.2
-ultralytics==8.0.0
-easyocr==1.7.1
