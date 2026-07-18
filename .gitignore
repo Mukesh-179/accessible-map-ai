@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# Environment
+.env
+.env.*
+
+# Streamlit
+.streamlit/
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# ML Models
+*.pt
+
+# Logs
+*.log
