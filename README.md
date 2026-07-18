@@ -1,151 +1,311 @@
-# 🧭 Accessible Map AI
+# 🌍 Accessible Map AI
 
-An AI-powered inclusive navigation system designed to improve mobility, safety, and accessibility for wheelchair users, visually impaired individuals, senior citizens, and the general public.
+<p align="center">
+  <img src="assets/banner.png" alt="Accessible Map AI Banner" width="100%">
+</p>
 
----
+<h3 align="center">
+AI-Powered Smart Inclusive Mobility Platform
+</h3>
 
-## 🚀 Live Features
+<p align="center">
+Helping wheelchair users, visually impaired individuals, elderly citizens, and people with mobility challenges navigate the world safely using Artificial Intelligence, Computer Vision, and Smart Navigation.
+</p>
 
-### 🗺 Smart Route Planning
-- Accessibility-aware routing
-- Wheelchair-friendly navigation
-- Walking, Car, Bus, Bicycle support
-- Safety & Accessibility scoring
-- Redis caching for performance
+<p align="center">
 
-### 👁 Vision Assistance (AI Powered)
-- Obstacle Detection (YOLOv8)
-- Signboard Text Recognition (EasyOCR)
-- Pedestrian Crossing Detection
-- Surface Quality Analysis
+![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?logo=streamlit)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?logo=mongodb)
+![Redis](https://img.shields.io/badge/Redis-DC382D?logo=redis)
+![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker)
 
-### 🚨 Emergency System
-- SOS trigger with live location
-- Emergency contact management
-- Public emergency helplines (India)
-
-### 🅿 Smart Parking
-- Nearby parking search (Geoapify)
-- Accessible parking detection
-- Availability simulation
-
-### 📊 Community Reporting
-- Report accessibility issues
-- Geo-based nearby issue search
+</p>
 
 ---
 
-## 🏗 Architecture
+# 📖 Overview
 
-Frontend: Streamlit  
-Backend: FastAPI  
-Database: MongoDB  
-Cache: Redis  
-Maps API: Geoapify  
-AI Models: YOLOv8 + EasyOCR  
-Authentication: JWT  
+Accessible Map AI is an AI-powered navigation platform designed to improve mobility and accessibility for everyone.
+
+The platform combines **Artificial Intelligence**, **Computer Vision**, **Geo-Spatial Intelligence**, and **Modern Cloud Technologies** to provide safer, smarter, and more inclusive navigation.
+
+---
+
+# ✨ Key Features
+
+## 🧭 Smart Navigation
+
+- Route Planning
+- Accessibility-aware Routing
+- Step-Free Navigation
+- Distance & Time Estimation
+- Safety Score
+- Parking Assistance
+
+---
+
+## 👁️ AI Vision Assist
+
+- 🚧 Obstacle Detection (YOLOv8)
+- 📄 Sign Reading (EasyOCR)
+- 🚸 Crossing Detection
+- 🛣️ Surface Analysis
+
+---
+
+## 📍 Smart Places
+
+- Hospitals
+- Pharmacies
+- Restaurants
+- Hotels
+- Public Toilets
+- Fuel Stations
+- Parking
+- Bus Stops
+
+---
+
+## 🔐 User Management
+
+- Registration
+- Login
+- JWT Authentication
+- Secure Password Hashing
+
+---
+
+## 📊 Dashboard
+
+- Smart Analytics
+- Route History
+- Reports
+- Emergency Contacts
+- Safety Score
+
+---
+
+# 📸 Application Screenshots
+
+## Login & Registration
+
+<img width="2840" height="1256" alt="Screenshot 2026-07-18 224518" src="https://github.com/user-attachments/assets/8e499851-e1d6-4085-a3ef-6d117c3952af" />
+
+## Dashboard
+<img width="2852" height="1246" alt="Screenshot 2026-07-18 224617" src="https://github.com/user-attachments/assets/b7fe4bde-7eef-4bd3-8ce2-9fbda6406e35" />
+
+
+# 🏗️ System Architecture
+
+```
+                User
+                  │
+                  │
+          Streamlit Frontend
+                  │
+        REST API (FastAPI)
+                  │
+      ┌───────────┼─────────────┐
+      │           │             │
+ MongoDB       Redis      Geoapify APIs
+      │                         │
+      └───────────┬─────────────┘
+                  │
+          AI Vision Module
+      (YOLOv8 + EasyOCR + OpenCV)
+```
+
+---
+
+# 🛠️ Tech Stack
+
+## Frontend
+
+- Streamlit
+- HTML
+- CSS
+- Streamlit Folium
+- Requests
+
+## Backend
+
+- FastAPI
+- Uvicorn
+- Pydantic
+- JWT
+- Passlib
+
+## AI & Computer Vision
+
+- YOLOv8
+- EasyOCR
+- OpenCV
+- NumPy
+- Pillow
+
+## Database
+
+- MongoDB Atlas
+- Redis
+
+## APIs
+
+- Geoapify Routing
+- Geoapify Places
+- Geoapify Geocoding
+
+## Deployment
+
+- Docker
+- Render
+- Zoho Catalyst AppSail
+
+---
+
+# 📂 Project Structure
+
+```
 accessible-map-ai/
+
 │
-├── backend/ → FastAPI backend
-│ └── main.py
+├── backend/
+│   ├── Dockerfile
+│   ├── main.py
+│   ├── requirements.txt
 │
-├── frontend/ → Streamlit frontend
-│ └── app.py
+├── frontend/
+│   ├── Dockerfile
+│   ├── app.py
+│   ├── requirements.txt
 │
-└── README.md
-accessible-map-ai/
-│
-├── backend/ → FastAPI backend
-│ └── main.py
-│
-├── frontend/ → Streamlit frontend
-│ └── app.py
-│
-└── README.md
-🔧 Backend Setup
-Step 1 — Create Virtual Environment
-Windows
-python -m venv .venv
-.venv\Scripts\activate
-Mac/Linux
-python3 -m venv .venv
-source .venv/bin/activate
-Step 2 — Install Backend Dependencies
+├── README.md
+├── requirements.txt
+└── .gitignore
+```
+
+---
+
+# ⚙️ Installation
+
+## Clone Repository
+
+```bash
+git clone https://github.com/Mukesh-179/accessible-map-ai.git
+
+cd accessible-map-ai
+```
+
+---
+
+## Backend
+
+```bash
 cd backend
+
 pip install -r requirements.txt
 
-If requirements.txt is missing:
-
-pip install fastapi uvicorn motor redis pydantic pydantic-settings passlib python-jose[cryptography] aiohttp ultralytics easyocr opencv-python
-Step 3 — Create Environment File
-
-Inside backend/ create .env:
-
-SECRET_KEY=your_secret_key_here
-GEOAPIFY_API_KEY=your_geoapify_api_key
-MONGODB_URL=mongodb://localhost:27017
-REDIS_URL=redis://localhost:6379
-
-⚠️ Never push .env to GitHub.
-
-Step 4 — Run Backend
 uvicorn main:app --reload
+```
 
-Backend runs at:
+Backend
 
-http://127.0.0.1:8000
+```
+http://localhost:8000
+```
 
-API Docs:
+---
 
-http://127.0.0.1:8000/docs
-🎨 Frontend Setup
-Step 1 — Install Frontend Dependencies
+## Frontend
+
+```bash
 cd frontend
-pip install streamlit requests folium streamlit-folium pandas
-Step 2 — Run Frontend
+
+pip install -r requirements.txt
+
 streamlit run app.py
+```
 
-Frontend runs at:
+Frontend
 
+```
 http://localhost:8501
-🧪 Running Full System
+```
 
-Start MongoDB
+---
 
-Start Redis
+# 🐳 Docker
 
-Run Backend
+Backend
 
-Run Frontend
+```bash
+cd backend
 
-Open Streamlit in browser
+docker build -t accessible-map-backend .
 
-🔒 Security Features
+docker run -p 8000:8000 accessible-map-backend
+```
 
-JWT Authentication
+Frontend
 
-Password Hashing (bcrypt)
+```bash
+cd frontend
 
-Secure environment configuration
+docker build -t accessible-map-frontend .
 
-CORS enabled
+docker run -p 8501:8501 accessible-map-frontend
+```
 
-Redis caching
+---
 
-📈 Future Improvements
+# 🌐 Live Demo
 
-Live GPS tracking
+### Frontend
 
-Real-time traffic integration
+https://accessible-map-frontend.onrender.com
 
-Voice navigation system
+### Backend
 
-Mobile app version
+https://accessible-map-backend-50044139017.development.catalystappsail.in
 
-Volunteer emergency network
+---
+> [!IMPORTANT]
+> **Preview Notes**
+>
+> - ⏳ The backend is hosted on a free cloud service and may take **1–2 minutes** to wake up after a period of inactivity.
+> - 🔄 If the application appears to load slowly or requests initially fail, please wait a moment and try again.
+> - 📝 During registration, ensure that all required fields are filled with **valid information**.
+> - ⚠️ Invalid, incomplete, or incorrectly formatted input may result in backend validation errors.
+> - ✅ Once the backend has started, the application functions normally.
 
-👨‍💻 Author
+---
 
-Mukesh Vemuri
-AI & Full Stack Developer
-Focused on Accessible Technology
+# 🚀 Future Improvements
+
+- Mobile Application
+- Voice Navigation
+- Live Camera Support
+- AI Route Recommendation
+- Crowd Density Detection
+- Offline Maps
+- Public Transport Accessibility
+- Multi-language Support
+
+---
+
+# 👨‍💻 Author
+
+**Mukesh Vemuri**
+
+B.Tech – Computer Science & Data Science
+
+GitHub
+
+https://github.com/Mukesh-179
+
+---
+
+# ⭐ Support
+
+If you found this project useful, consider giving it a ⭐ on GitHub.
