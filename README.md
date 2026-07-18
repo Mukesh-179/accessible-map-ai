@@ -1,8 +1,6 @@
-# 🌍 Accessible Map AI
+  # 🌍 Accessible Map AI
 
 
-" alt="Accessible Map AI Banner" width="100%">
-</p>
 
 <h3 align="center">
 AI-Powered Smart Inclusive Mobility Platform
