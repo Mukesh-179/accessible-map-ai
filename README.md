@@ -1,7 +1,8 @@
 # 🌍 Accessible Map AI
 
 <p align="center">
-  <img src="assets/banner.png" alt="Accessible Map AI Banner" width="100%">
+  <img src="<img width="1572" height="690" alt="Screenshot 2026-07-18 233334" src="https://github.com/user-attachments/assets/526b1fbb-168f-4a60-9897-4e6df15d1875" />
+" alt="Accessible Map AI Banner" width="100%">
 </p>
 
 <h3 align="center">
