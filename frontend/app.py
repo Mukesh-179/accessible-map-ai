@@ -678,6 +678,8 @@ def show_login_page():
                             "password": password
                         })
 
+                        
+
                         if response and response.status_code == 200:
                             data = response.json()
                             st.session_state.token = data["access_token"]
@@ -697,8 +699,12 @@ def show_login_page():
                         elif response:
                             st.error(f"❌ Login failed: {response.status_code}")
                         else:
-                            st.error("❌ Connection error. Please check if the backend is running.")
-
+                            st.warning("""
+                            ⏳ Unable to connect to the backend.
+                            
+                            If your email and password are correct, please wait 1–2 minutes and try again.
+                            Our backend is hosted on a free cloud service and may take a short time to wake up after being idle.
+                            """)
         # ================= REGISTER =================
         with tab2:
             name = st.text_input("👤 Full Name")
@@ -752,7 +758,13 @@ def show_login_page():
                             except:
                                 st.error(f"Registration failed: {response.text}")
                         else:
-                            st.error("No response from backend")
+                            st.warning("""
+                            ⏳ Unable to connect to the backend.
+
+                            Please make sure all the details you entered are correct.
+                            If they are correct, please wait 1–2 minutes and try again.
+                            Our backend is hosted on a free cloud service and may take a short time to wake up after being idle.
+                            """)
 
         st.markdown("</div>", unsafe_allow_html=True)
 
