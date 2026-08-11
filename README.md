@@ -258,14 +258,8 @@ docker run -p 8501:8501 accessible-map-frontend
 ---
 
 # 🌐 Live Demo
+-> https://accessible-map-frontend.onrender.com
 
-### Frontend
-
-https://accessible-map-frontend.onrender.com
-
-### Backend
-
-https://accessible-map-backend-50044139017.development.catalystappsail.in
 
 ---
 > [!IMPORTANT]
